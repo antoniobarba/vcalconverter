@@ -64,7 +64,7 @@ END:VTIMEZONE
 END:VCALENDAR'''
 
     def toVCS(self):
-        expEvents = '\n'.join([x.toICS() for x in self.events])
+        expEvents = '\n'.join([x.toVCS() for x in self.events])
         return f'''BEGIN:VCALENDAR
 VERSION:1.0
 PRODID:-//Antonio Barba//VCalConverter Beta//1.0//EN
@@ -117,4 +117,4 @@ parser = argparse.ArgumentParser(description="Convert iCal (*.ics) file format t
 parser.add_argument('fileName', type=str, help="Path to the file to be converted")
 args = parser.parse_args()
 cal = Calendar(args.fileName)
-uprint(cal.toICS())
+uprint(cal.toVCS())
