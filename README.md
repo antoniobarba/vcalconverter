@@ -5,7 +5,7 @@ Conversion Tool from iCalendar (\*.ics) to vCalendar (\*.vcs) file formats
 Python 3.6 or newer (tested on Windows, but it should work on Linux and Mac too with minimal changes if any)
 
 ## Usage
-python vcalconverter.py <fileName>
+python vcalconverter.py \<fileName\>
   
 Output: The converted calendar in vCal format, on the standard output
 
